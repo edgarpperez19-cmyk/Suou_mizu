@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0b1024">
+<meta name="description" content="Suou_mizu — anime art, characters and illustrations.">
+<title>Suou_mizu — Anime</title>
+<style>
+:root{
+  --bg:#080b18; --card:rgba(20,25,50,.72); --line:rgba(255,255,255,.10);
+  --text:#f7f7fb; --muted:#aeb4cc; --pink:#ff6fae; --purple:#9b7cff;
+}
+*{box-sizing:border-box}
+body{
+  margin:0; min-height:100vh; color:var(--text);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  background:
+    radial-gradient(circle at 15% 5%, rgba(255,111,174,.20), transparent 28%),
+    radial-gradient(circle at 85% 15%, rgba(155,124,255,.22), transparent 30%),
+    linear-gradient(145deg,#070914,#10162d 55%,#080b18);
+}
+.wrap{width:min(680px,100%);margin:auto;padding:34px 18px 45px}
+.hero{text-align:center}
+.avatar{
+  width:92px;height:92px;margin:auto;border-radius:50%;
+  display:grid;place-items:center;font-size:29px;font-weight:800;
+  background:linear-gradient(135deg,var(--pink),var(--purple));
+  border:3px solid rgba(255,255,255,.18);
+  box-shadow:0 14px 45px rgba(255,111,174,.22);
+}
+h1{margin:15px 0 4px;font-size:29px;letter-spacing:.2px}
+.handle{color:#ff9bc5;font-weight:700}
+.bio{color:var(--muted);line-height:1.55;margin:10px auto 20px;max-width:520px}
+.badges{display:flex;justify-content:center;gap:8px;flex-wrap:wrap;margin-bottom:22px}
+.badge{padding:7px 11px;border:1px solid var(--line);border-radius:999px;background:rgba(255,255,255,.045);font-size:12px;color:#dfe2ef}
+.links{display:grid;gap:12px}
+a.button{
+  text-decoration:none;color:var(--text);display:flex;align-items:center;justify-content:center;
+  min-height:58px;padding:13px 18px;border-radius:17px;
+  border:1px solid var(--line);background:var(--card);
+  backdrop-filter:blur(16px);font-weight:750;transition:.2s;
+}
+a.button:hover{transform:translateY(-2px);border-color:rgba(255,111,174,.5)}
+.primary{background:linear-gradient(135deg,#ff5fa4,#8f70ff)!important;border:0!important}
+.section{margin-top:28px}
+.section h2{font-size:14px;letter-spacing:1.5px;text-transform:uppercase;color:#dfe2ef;margin:0 0 12px}
+.card{padding:17px;border-radius:20px;background:var(--card);border:1px solid var(--line)}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:9px}
+.stat{text-align:center;padding:13px 7px;border-radius:15px;background:rgba(255,255,255,.045)}
+.stat b{display:block;font-size:20px}.stat span{font-size:11px;color:var(--muted)}
+.note{text-align:center;color:var(--muted);font-size:12px;margin-top:28px}
+.share{margin-top:12px}
+footer{text-align:center;color:#707792;font-size:11px;margin-top:30px}
+</style>
+</head>
+<body>
+<main class="wrap">
+  <header class="hero">
+    <div class="avatar">SM</div>
+    <h1>Suou_mizu</h1>
+    <div class="handle">@suou_mizu</div>
+    <p class="bio">Anime art, characters &amp; illustrations ✦<br>Un pequeño espacio para compartir mis favoritas.</p>
+    <div class="badges">
+      <span class="badge">🎨 Anime Art</span>
+      <span class="badge">🌸 Waifus</span>
+      <span class="badge">✨ 4K</span>
+    </div>
+  </header>
+
+  <section class="links">
+    <a class="button primary" href="https://www.facebook.com/share/19jQeHXQjA/?mibextid=wwXIfr" target="_blank">📘 Facebook</a>
+    <a class="button" href="https://www.instagram.com/suou_mizu?stkn=MTVtbGs0eHlnMmU3aw%3D%3D&utm_source=qr" target="_blank">📸 Instagram</a>
+    <a class="button" href="https://www.tiktok.com/@suou_mizu?_r=1&_t=ZP-9ANpRmMduFq" target="_blank">🎵 TikTok</a>
+    <a class="button" href="https://ko-fi.com/suou_mizu" target="_blank">☕ Support me on Ko-fi</a>
+  </section>
+
+  <section class="section">
+    <h2>Suou_mizu</h2>
+    <div class="card">
+      <div class="stats">
+        <div class="stat"><b>🎨</b><span>Anime</span></div>
+        <div class="stat"><b>✨</b><span>Illustrations</span></div>
+        <div class="stat"><b>🌸</b><span>Characters</span></div>
+      </div>
+    </div>
+  </section>
+
+  <button class="button share" style="width:100%;cursor:pointer;font:inherit" onclick="sharePage()">↗️ Compartir perfil</button>
+  <p class="note">Made with ✦ for anime lovers</p>
+  <footer>© 2026 Suou_mizu</footer>
+</main>
+
+<script>
+async function sharePage(){
+  const data={title:"Suou_mizu",text:"Anime art & illustrations ✦",url:location.href};
+  if(navigator.share){try{await navigator.share(data)}catch(e){}}
+  else{await navigator.clipboard.writeText(location.href);alert("Link copiado ✨")}
+}
+</script>
+</body>
+</html>
